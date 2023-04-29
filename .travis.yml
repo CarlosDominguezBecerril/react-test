@@ -14,7 +14,7 @@ after_success:
   - docker build -t hotcoconut/multi-server ./server
   - docker build -t hotcoconut/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push the to docker hub
   - docker push hotcoconut/multi-client 
   - docker push hotcoconut/multi-nginx
